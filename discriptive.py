@@ -1,9 +1,9 @@
 import pandas as pd
 import streamlit as st
-import app
+import app 
 
 
-#Discriptive Satistics
+#Discriptive Satistics 
 def discriptivestate(options):
     
     #st.set_page_config(layout='wide' , page_title='DataPostmartem')
@@ -12,7 +12,7 @@ def discriptivestate(options):
     col1 , col2 = st.columns(2)
     with col1:
          st.dataframe(app.df[options])
-
+    
     with col2:
         df_shape = str(app.df[options].shape)
         st.metric("DataFram Shape Accrodin to choosen Column", df_shape ) # type: ignore
